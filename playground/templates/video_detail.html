@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block page_content %}
+    <div class="mw6 center pa3 sans-serif">
+        <h1 class="mb4">Year: {{y}} </h1>
+        <header class="b mb2">Category: {{c}} </header>
+        {% for v in videos %}
+        <div class="pa2 mb3 striped--near-white">
+            <div class="pl2">
+                <p class="mb2">Video ID: {{v.video_id}}</p>
+                <p class="mb2">Title: {{v.title}}</p>
+                <p class="mb2">Date: {{v.published_at}}</p>
+                <p class="mb2">Channel ID: {{v.channel_id}}</p>
+                <p class="mb2">Country Code: {{v.country_code}}</p>
+                <p class="mb2">Thumbnail: {{v.thumbnail_link}}</p>
+                <p class="mb2">Category ID: {{v.category_id}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
